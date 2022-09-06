@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -26,9 +24,7 @@ export class AppComponent {
     title: new FormControl('',{validators:[Validators.required]}),
     body: new FormControl('',{validators:[Validators.required]})
    })
-   constructor(private router:Router,private http:HttpClient) { 
-    
-   }
+   constructor(private http:HttpClient) { }
  
    ngOnInit(): void {
  
